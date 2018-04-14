@@ -1,0 +1,38 @@
+<% include partials/header %>
+  <main class="principal">
+    <h1>Add Customer</h1>
+    <% if(errors != undefined){ %>
+      <ul>
+        <% errors.forEach(function(error){ %>
+          <li>
+            <%= error.msg %>
+          </li>
+        <% }) %>
+      </ul>
+    <% } %>
+
+    <form method="POST" action="/users/add">
+
+      <label class="label1">First Name</label>      
+      <input placeholder="First Name" type="text" name="first_name"/>
+      <label class="label1">Last Name</label>
+      <input placeholder="Last Name" type="text" name="last_name" />
+
+      <label>Email</label>
+      <input placeholder="Email" type="email" name="email" />
+      <input class="btn" type="submit" value="Add" />
+    </form>
+
+    <h1 class="customers"><%= title %></h1>
+
+    <ul class="users">
+      <% users.forEach(function(user){ %>
+        <li><%= user.first_name %> <%= user.last_name %> - <a data-id="<%= user._id %>" class="deleteUser" href="#"><span>Delete</span></a></li>
+      <% }) %>
+    </ul>
+  </main>
+
+
+<%include partials/footer %>
+
+<!--  Para output de variáveis temos que usar %= -->

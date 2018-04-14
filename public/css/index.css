@@ -1,0 +1,92 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+body{
+  background-color: white;
+}
+
+.principal{
+  background-color: #212121;
+  font-family: monospace;
+  width: 40%;
+  margin-left: 30%;
+  text-decoration: none;
+  color: white;
+  margin-top: 8%;
+  margin-bottom: 5%;  
+  padding-bottom: 2em;
+}
+
+.principal h1{
+  text-align: center;
+}
+
+.principal form{
+  margin-top: 5%;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 60%;
+  margin-left: 20%;
+}
+
+.btn{
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  height: 3em;
+}
+
+
+.principal form input{
+  margin-bottom: 2em;
+  margin-top: 2em;
+  border: none;
+  height: 2em;
+}
+
+.principal form label{
+  font-size: 1.6em;
+}
+
+
+.users{
+  background-color: white;
+  color: black;
+  width: 60%;
+  margin-left: 20%;
+  position: sticky;
+  height: 300px;
+  list-style: none;
+  overflow: auto;
+}
+
+ul:nth-child(odd){
+  background: grey;
+}
+
+.users li{
+  border-bottom: 2px lightgrey solid;
+  font-size: 1.3em;
+}
+
+.btn:hover{
+  cursor: pointer;
+  background-color: white;
+  color: black
+}
+
+.users a{
+  text-decoration: underline;
+  color: black;
+}
+
+.users span{
+  text-align: right;
+}
+
+.customers{
+  margin-bottom: 1em;
+}
